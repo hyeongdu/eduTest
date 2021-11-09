@@ -55,4 +55,11 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.getListWithPaging(cri);
 	}
 
+	//323 참고
+	@Override
+	public int getTotal(Criteria cri) {
+		log.info("getTotalCount .......");
+		return mapper.getTotalCount(cri);
+	}
+
 }
