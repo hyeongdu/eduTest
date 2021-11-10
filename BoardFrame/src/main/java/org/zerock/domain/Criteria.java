@@ -19,16 +19,18 @@ public class Criteria {
 	
 	public Criteria() {
 		this(1, 10);
+		System.out.println("순서가 궁금하다" + pageNum);
 	}
 	
 	public Criteria(int pageNum, int amount) {
+		System.out.println("순서가 궁금하다2" + pageNum);
 		this.pageNum = pageNum;
 		this.amount = amount;
 	}
 
 	public String[] getTypeArr() {
 		
-		return type ==null ? new String[] {} : type.split("");
+		return type ==null ? new String[] {} : type.split("");   //타입은 t,w 이렇게 되어있기 때문에 배열로 바꾼다. 
 	}
 	
 	public String getListLink() {

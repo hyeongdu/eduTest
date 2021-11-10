@@ -114,11 +114,11 @@ public class TimeMapperTests {
 //		List<BoardVO> list = mapper.getListWithPaging(cri);
 //		list.forEach(board -> log.info(board));
 //		
-		Criteria cri = new Criteria();
-		cri.setKeyword("테스트");
-		cri.setType("TC");
-		List<BoardVO> list = mapper.getListWithPaging(cri);
-		list.forEach(board -> log.info(board));
+//		Criteria cri = new Criteria();
+//		cri.setKeyword("테스트");
+//		cri.setType("TC");
+//		List<BoardVO> list = mapper.getListWithPaging(cri);
+//		list.forEach(board -> log.info(board));
 		
 	}
 	

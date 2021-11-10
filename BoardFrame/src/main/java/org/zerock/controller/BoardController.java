@@ -49,6 +49,7 @@ public class BoardController {
 		service.register(board);
 		
 		//redirect를 이용하면서 추가적으로 새로운 데이터를 전달하고자 할 때 
+		//Flash 는 일회성 없는 것은 get방식으로 들어가 URL에 표시된
 		rttr.addFlashAttribute("result" , board.getBno());
 		return "redirect:/board/list";
 	}

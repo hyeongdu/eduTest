@@ -134,6 +134,7 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-6 -->
+              </div>
             <!-- /.row -->
             <script type="text/javascript">
             	$(document).ready(function(){
@@ -183,6 +184,7 @@
             		
             		
             		$("#searchForm button").on("click",function(e) {
+            			alert(searchForm.find("option:selected").val());
 						if (!searchForm.find("option:selected").val()) {
 							alert("검색종류를 선택하세요");
 							return false;
