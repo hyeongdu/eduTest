@@ -138,11 +138,11 @@
             	var bnoValue = '<c:out value="${board.bno}"/>';
             	var replyUL = $(".chat");
             	
-            		showList(1);
+            		showList(-1);
             		
             		function showList(page){
             			
-            			replyService.getList({bno : bnoValue, page : page || 1}, function(list, replyCnt){
+            			replyService.getList({bno : bnoValue, page : page || 1}, function(replyCnt, list){
             				
             				if(page == -1){
             					pageNum = Math.ceil(replyCnt/10.0);
@@ -253,6 +253,7 @@
             			var startNum = endNum -9;
             			
             			var prev = startNum != 1;
+            			console.log(prev + " : 입니다");
             			var next = false;
             			
             			if(endNum * 10 >= replyCnt){
@@ -269,7 +270,7 @@
             				
             				
             			}
-            			for (var i = startNum; i < endNum; i++) {
+            			for (var i = startNum; i <= endNum; i++) {
 							var active = pageNum == i? "active" : "";
 							str += "<li class='page-item "+active+" '><a class='page-link' href='"+i+"'>"+i+"</a></li>";
 						}
@@ -279,7 +280,6 @@
             			
             			str += "</ul></div>";
             			
-            			console.log(str);
             			replyPageFooter.html(str);
             		}
             		
@@ -287,11 +287,9 @@
             		replyPageFooter.on("click","li a", function(e){
             			e.preventDefault();
             			
-            			console.log("page Click");
             			
             			var targetPageNum = $(this).attr("href");
             			
-            			console.log("targetPageNum : " + targetPageNum);
             			pageNum = targetPageNum;
             			
             			showList(pageNum);
