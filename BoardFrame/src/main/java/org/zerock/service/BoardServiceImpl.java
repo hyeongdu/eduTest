@@ -62,4 +62,10 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.getTotalCount(cri);
 	}
 
+	@Override
+	public Integer doAdd(String str1, String str2) throws Exception {
+		// TODO Auto-generated method stub
+		return Integer.parseInt(str2) + Integer.parseInt(str2);
+	}
+
 }

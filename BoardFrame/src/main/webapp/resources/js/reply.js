@@ -3,6 +3,8 @@ console.log("Reply modul................");
 var replyService = (function(){
 	function add(reply, callback, error){
 		console.log("reply...............");
+		console.log(JSON.stringify(reply));
+		console.log(reply);
 		
 		$.ajax({
 			type : 'post',

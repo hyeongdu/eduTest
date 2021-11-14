@@ -72,7 +72,7 @@ public class TimeMapperTests {
 	
 	//serveice
 	@Test
-	public void testUpdate() {
+	public void testUpdate() throws Exception {
 //		//최초테스트
 //		log.info(service);
 //		assertNotNull(service);
@@ -120,6 +120,7 @@ public class TimeMapperTests {
 //		List<BoardVO> list = mapper.getListWithPaging(cri);
 //		list.forEach(board -> log.info(board));
 		
+		log.info(service.doAdd("123", "455"));
 	}
 	
 	

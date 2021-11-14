@@ -19,4 +19,6 @@ public interface BoardService {
 	public List<BoardVO> getListWithPaging(Criteria cri);
 	
 	public int getTotal(Criteria cri);
+	
+	public Integer doAdd(String str1, String str2)throws Exception;
 }
