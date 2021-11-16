@@ -1,15 +1,12 @@
 package org.zerock.mapper;
 
-import java.util.List;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.zerock.domain.BoardVO;
-import org.zerock.domain.Criteria;
 import org.zerock.service.BoardService;
+import org.zerock.service.SampleTxService;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -21,12 +18,17 @@ import lombok.extern.log4j.Log4j;
 public class TimeMapperTests {
 	
 	
-	//@Autowired
+//	//@Autowired
+//	@Setter(onMethod_ = @Autowired)
+//	private BoardMapper mapper;
+//	//@Autowired
+//	@Setter(onMethod_ = @Autowired)
+//	private BoardService service;
+//	
 	@Setter(onMethod_ = @Autowired)
-	private BoardMapper mapper;
-	//@Autowired
-	@Setter(onMethod_ = @Autowired)
-	private BoardService service;
+	private SampleTxService service1;
+	
+	
 	
 //	@Test
 //	public void testGetData() {
@@ -120,7 +122,12 @@ public class TimeMapperTests {
 //		List<BoardVO> list = mapper.getListWithPaging(cri);
 //		list.forEach(board -> log.info(board));
 		
-		log.info(service.doAdd("123", "455"));
+//		log.info(service.doAdd("123", "455"));
+		
+		String str = "Loaded default TestExecutionListener class names from location";
+		log.info(str.getBytes().length);
+		
+		service1.addData(str);
 	}
 	
 	

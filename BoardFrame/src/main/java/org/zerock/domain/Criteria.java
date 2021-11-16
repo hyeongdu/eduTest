@@ -19,11 +19,11 @@ public class Criteria {
 	
 	public Criteria() {
 		this(1, 10);
-		System.out.println("순서가 궁금하다" + pageNum);
+//		System.out.println("순서가 궁금하다" + pageNum);
 	}
 	
 	public Criteria(int pageNum, int amount) {
-		System.out.println("순서가 궁금하다2" + pageNum);
+//		System.out.println("순서가 궁금하다2" + pageNum);
 		this.pageNum = pageNum;
 		this.amount = amount;
 	}
